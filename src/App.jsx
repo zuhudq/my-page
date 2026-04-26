@@ -223,7 +223,7 @@ function App() {
             {/* Lapis 3: Container Foto Utama dengan Ring Tegas */}
             <div className="w-28 h-28 rounded-full p-1 border-2 border-teal-500/50 bg-slate-900 shadow-[0_0_30px_rgba(20,184,166,0.5)] z-10 relative">
               <img
-                src="models/profil.jpg"
+                src="/profil.jpg"
                 alt="Foto Profil Zuhud Qolbu"
                 className="w-full h-full object-cover rounded-full opacity-95 transition-opacity duration-300 group-hover:opacity-100"
               />
