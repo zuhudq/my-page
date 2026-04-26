@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0f172a; /* Warna slate-900 untuk dasar dark mode */
+}
+
+/* Sembunyikan scrollbar untuk Chrome, Safari dan Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body {
+  @apply bg-slate-950;
+  /* Tambahan ini untuk menyembunyikan scrollbar di luar kontainer utama jika perlu */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+/* Sembunyikan scrollbar untuk Chrome, Safari, dan Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Animasi Kustom untuk Kesan Mewah --- */
+@keyframes breathing-glow {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes breathing-glow-fast {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-breathing {
+  animation: breathing-glow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-breathing-fast {
+  animation: breathing-glow-fast 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
