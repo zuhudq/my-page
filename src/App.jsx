@@ -255,6 +255,14 @@ function App() {
             <p className="font-serif italic text-slate-400 text-[13px] tracking-widest mt-1 opacity-80">
               — let's connect & collaborate —
             </p>
+            {/* --- INSTRUKSI SLIDE BARU (DENGAN PANAH) --- */}
+            <div className="flex items-center gap-3 mt-2 animate-pulse">
+              <span className="text-teal-400 text-sm font-bold">&larr;</span>
+              <p className="text-[10px] text-slate-400 tracking-[0.4em] uppercase font-bold">
+                Slide to Explore
+              </p>
+              <span className="text-teal-400 text-sm font-bold">&rarr;</span>
+            </div>
           </div>
         </header>
 
@@ -309,13 +317,6 @@ function App() {
                 </a>
               );
             })}
-          </div>
-
-          <div className="flex flex-col items-center gap-2 mt-4">
-            <p className="text-[10px] text-slate-500 tracking-[0.5em] uppercase animate-pulse">
-              Slide to Explore
-            </p>
-            <div className="w-px h-12 bg-gradient-to-b from-teal-500/50 to-transparent"></div>
           </div>
         </main>
 
