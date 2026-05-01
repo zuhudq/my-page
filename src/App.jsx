@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Globe, ShoppingBag } from "lucide-react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import Typewriter from "typewriter-effect";
+import { SiShutterstock } from "react-icons/si";
 
 // =========================================
 // KOMPONEN: KURSOR NEON KUSTOM
@@ -98,6 +99,7 @@ function App() {
       icon: <FaLinkedin size={44} />,
       activeGlow:
         "ring-4 ring-blue-500/50 shadow-[0_0_70px_rgba(59,130,246,0.8)] text-blue-300 border-blue-400",
+      chillText: "Where I Wear a Collar",
     },
     {
       title: "Website",
@@ -105,6 +107,7 @@ function App() {
       icon: <Globe size={44} />,
       activeGlow:
         "ring-4 ring-teal-500/50 shadow-[0_0_70px_rgba(45,212,191,0.8)] text-teal-200 border-teal-400",
+      chillText: "Pixels & Logics",
     },
     {
       title: "Digital Product",
@@ -112,6 +115,7 @@ function App() {
       icon: <ShoppingBag size={44} />,
       activeGlow:
         "ring-4 ring-purple-500/50 shadow-[0_0_70px_rgba(168,85,247,0.8)] text-purple-300 border-purple-400",
+      chillText: "Support My Creative Drops",
     },
     {
       title: "GitHub",
@@ -119,6 +123,16 @@ function App() {
       icon: <FaGithub size={44} />,
       activeGlow:
         "ring-4 ring-slate-400/50 shadow-[0_0_70px_rgba(255,255,255,0.4)] text-slate-100 border-white",
+      chillText: "Raw Codes & Late Nights",
+    },
+    {
+      title: "Shutterstock",
+      url: "https://www.shutterstock.com/g/zuhudqolbu", // Jangan lupa ganti dengan username aslimu
+      icon: <SiShutterstock size={44} />,
+      // Efek neon merah/koral khas Shutterstock
+      activeGlow:
+        "ring-4 ring-red-500/50 shadow-[0_0_70px_rgba(239,68,68,0.8)] text-red-400 border-red-500",
+      chillText: "Captured Moments",
     },
     {
       title: "Instagram",
@@ -126,6 +140,7 @@ function App() {
       icon: <FaInstagram size={44} />,
       activeGlow:
         "ring-4 ring-pink-500/50 shadow-[0_0_70px_rgba(236,72,153,0.8)] text-pink-300 border-pink-400",
+      chillText: "Life Outside the Screen",
     },
   ];
 
@@ -250,7 +265,7 @@ function App() {
 
           <div className="flex flex-col items-center gap-2 mb-8 z-10 relative">
             <h2 className="font-sans font-light text-sm text-teal-300 tracking-wider lowercase drop-shadow-sm opacity-90">
-              mahasiswa sistem informasi biasa yang suka ngulik web & produk.
+              Undergraduated | Weaving Codes & Crafting Products.
             </h2>
             <p className="font-serif italic text-slate-400 text-[13px] tracking-widest mt-1 opacity-80">
               — let's connect & collaborate —
@@ -287,7 +302,6 @@ function App() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  // Perhatikan penambahan "md:cursor-none" untuk elemen tautan (link)
                   className={`carousel-card relative snap-center flex-shrink-0 w-48 h-60 flex flex-col items-center justify-center gap-6 rounded-2xl border-2 transition-all duration-700 ease-out transform md:cursor-none
                     ${
                       isActive
@@ -296,6 +310,22 @@ function App() {
                     }
                   `}
                 >
+                  {/* --- POP-UP TEXT CHILL & PREMIUM (REVISI) --- */}
+                  <div
+                    className={`absolute -top-14 whitespace-nowrap transition-all duration-700 ease-out pointer-events-none z-30 flex justify-center
+                    ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                  >
+                    {/* Wadah Kapsul Kaca */}
+                    <div className="px-5 py-1.5 rounded-full border border-white/10 bg-slate-900/40 backdrop-blur-md shadow-[0_8px_20px_rgba(0,0,0,0.5)] flex items-center gap-2">
+                      {/* Titik neon kecil sebagai aksen */}
+                      <div className="w-1.5 h-1.5 rounded-full bg-teal-400/80 animate-pulse shadow-[0_0_5px_rgba(45,212,191,0.8)]"></div>
+
+                      <span className="font-serif italic text-[11px] tracking-widest text-slate-300 drop-shadow-sm lowercase">
+                        {link.chillText}
+                      </span>
+                    </div>
+                  </div>
+
                   {isActive && (
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none animate-pulse"></div>
                   )}
