@@ -102,8 +102,8 @@ function App() {
       chillText: "Where I Wear a Collar",
     },
     {
-      title: "Website",
-      url: "https://zuhudq.github.io/",
+      title: "My Web",
+      url: "https://hellozuhud.netlify.app/",
       icon: <Globe size={44} />,
       activeGlow:
         "ring-4 ring-teal-500/50 shadow-[0_0_70px_rgba(45,212,191,0.8)] text-teal-200 border-teal-400",
